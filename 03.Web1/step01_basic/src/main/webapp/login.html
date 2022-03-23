@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+<!--  html 주석 
+UTF-8 : 다국어 지원 설정
+client 브라우저에 다국어 지원하겠다는 설정
+-->
+
+
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<h2>로그인</h2>
+
+<!-- 
+form tag 
+	1. client가 입력 가능한 정보를 그룹핑화 하는 tag
+	2. submit이 포함된 form의 시작과 끝 tag가 하나의 그룹으로 간주
+	3. action 속성
+		- form의 데이터를 받아서 처리하게 되는 서버단 프로그램 url
+		- servlet or html or jsp	
+-->
+
+<!-- http://localhost:80/step01_basic/playdata  -->
+<form action="playdata" method="get">
+
+  <!--  단순히 브라우저에 출력하는 메세지  -->
+  <label>id : </label><br>
+  
+  <!--  
+  1. input tag들은 clinet가 브라우저에 입력 가능한 화면 제공(html) 
+  
+  2. type이란 속성값에 따라 특징이 다름
+  		type="text" - 한 행 입력, 입력되는 데이터가 다 보임
+  		type="password" - 한 행 입력, 입력되는 데이터가 안 보임
+  		br : break new line 
+  		type="submit" - form tag 내부의 모든 입력된 데이터(input tag)를 서버에 전송
+  		
+  3. input tag의 속성
+  		1. 시작 tag에만 적용하는 특성들
+  		2. type : "input 선정"
+  		3. name : 서버에서 데이터 구분을 위해 부여하는 데이터 별칭
+  		4. id : html tag들을 구분하기 위한 고유한 별칭
+  			주번, 사번, 학번과 같은 맥락
+  			단 js에서 tag 구분을 위해 주로 사용
+  -->
+  
+  
+  
+  
+  
+  
+  
+ <!-- <label>id : </label><br>  -->  
+  <input type="text" name="id" value="tester"><br>  
+  
+  <label>pw : </label>
+  
+  <!-- input type에 password하면 안보임  -->
+  <input type="password" name="pw" value="11"><br><br>
+  
+  <input type="submit" value="로그인">
+</form> 
+
+</body>
+</html>
