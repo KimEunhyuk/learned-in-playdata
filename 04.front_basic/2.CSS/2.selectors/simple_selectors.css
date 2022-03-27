@@ -1,0 +1,22 @@
+* {
+    font-family: 'Playfair Display', serif;
+}
+
+h2 {
+    color: slateblue;
+}
+
+.class-selector{
+    font-size: 30px;
+ /*   border-style : dashed;
+      border-width : 10px;
+      border-color : firebrick;*/
+    border : 2px dashed firebrick;
+}
+
+#id-selector{
+    font-size: 30px;
+    font-style: italic;
+    color: forestgreen;
+    font-weight: 400; /* 폰트 굵기, 숫자로도 가능 */
+}
