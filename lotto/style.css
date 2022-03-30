@@ -1,0 +1,38 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+
+/* reset.css */
+body{
+    margin: 0;
+    font-family: 'Titillium Web', 'Open Sans';
+}
+
+/* style.css*/
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;   /* viewport height*/
+    /*border: 2px dashed red;*/
+}
+
+.container {
+    text-align: center;
+}
+
+.container > h2{
+    color: white;
+    background-color: #000;
+    padding: 1rem;
+}
+
+.btn{
+    font-family: 'Titillium Web', 'Open Sans';
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    text-transform: capitalize; /* 앞글자 전체 대문자 */
+    background: transparent;
+    border : 2ps dashed black;
+    padding: 0.5rem 0.75rem; /* 2개 : 상하, 좌우 */
+}
