@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="root"></div><!-- 앞으로 작성할 react app은 이 <div> 내부에 렌더링됨-->
+    <button class="btn">increase</button>
+    
+    <!-- <div>
+        div입니다.
+        <p>p입니다.</p>
+    </div> -->
+
+    <script>
+        // console.log(React); // React : React의 최상위 API, React 라이브러리의 진입점.
+        // 이전 상태와 마지막 가장 최근 스냅샷과의 차이를 비교해주고,
+        // 이 변경내역(변경사항)을 ReactDOM에게 전달.
+        
+        // console.log(ReactDOM);
+        // React로 생성한 컴포넌트를 브라우저(Real DOM)에 전달해주는 역할.
+
+        //const component = React.createElement('div', null, 'div입니다.');
+        // div element를 만들고싶고, props는 없음(null),
+        // div element 내부의 text(content)로 'div입니다.' 를 넣고 싶음.
+        // console로 출력해보기.
+        //console.log(component);
+        //ReactDOM.render(component, document.querySelector('#root'));
+        
+        // const anotherComponent = React.createElement('div', null, 'div입니다.', React.createElement('p', null, 'p입니다.'));
+        // ReactDOM.render(anotherComponent, document.querySelector('#root'));
+        //console.log(anotherComponent);
+
+        // 커스텀(사용자 정의) 컴포넌트, 커스텀 컴포넌트 일반적으로 대문자로 시작, <img/>, <div>
+        const Component = props => {
+            return React.createElement('p', null, `${props.count}`);
+        };
+
+        // 초기 렌더링
+        ReactDOM.render(React.createElement(Component, { count: 0 }, null), document.querySelector('#root'));
+
+        let i = 0;
+
+        document.querySelector('button').addEventListener('click', () => {
+            // 버튼 이벤트에 따른 re-rendering
+            console.log('re-rendering');
+            ReactDOM.render(React.createElement(Component, { count: ++i }, null), document.querySelector('#root'));
+        });
+
+    </script>
+
+</body>
+</html>
