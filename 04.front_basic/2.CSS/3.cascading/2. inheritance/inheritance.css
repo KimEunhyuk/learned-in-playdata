@@ -1,0 +1,20 @@
+.disney {
+    color: pink;
+    font-size: 20px;
+}
+
+p {
+    border: dashed 2px;
+}
+
+h3 {
+    color: green;
+}
+
+#sidebar {
+    color: gold;
+}
+
+#sidebar h3 {
+    color: inherit;
+}
