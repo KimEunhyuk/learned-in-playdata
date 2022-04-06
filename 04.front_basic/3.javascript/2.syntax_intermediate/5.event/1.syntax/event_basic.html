@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="event_basic.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>javascript 이벤트(event) 추가, 제거</h1>
+    <hr>
+
+    <!-- 1. 이벤트 handler attribute 방식-->
+    <h3>EventHandler attribute way</h3>
+
+    <button onclick="display()">CLICK</button><br><br>
+    <!--버튼이 클릭되었을 때 발생하는 것들-->
+    <script>
+        function display() {
+            console.log('button clicked');
+        }
+    </script>
+
+    <!-- 2. EventHandler Property 방식-->
+    <h3>EventHandler property way</h3>
+    <button id="btn-ev-prop">CLICK</button><br><br>
+
+    <!-- 3. addEventListner method 방식-->
+    <h3>addEventListner way</h3>
+    <button id="btn-add-ev-lsnr">CLICK HERE</button>
+
+    <!-- 4. practice-->
+    <button id="btn-new">CLICK ME</button>
+
+</body>
+
+</html>
