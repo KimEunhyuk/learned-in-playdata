@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="root"></div>
+
+    
+    <script type="text/babel">
+        // 로그인 상태일 때 출력할 컴포넌트
+        const UserGreeting = (props) => {
+            return <h1>Welcome back!</h1>
+        };
+
+        // 비로그인 상태일 때 출력할 컴포넌트
+        const GuestGreeting = (props) => {
+            return <h1>Please sign up!</h1>;
+        }
+
+        // 로그인 여부를 알려주는 최상위 컴포넌트
+        const Greeting = (props) => {
+            // 로그인 여부에 따라 사용할 컴포넌트를 분기.
+            console.log(props.isLoggedIn); // false
+
+            const isLoggedIn = props.isLoggedIn;
+            
+            return isLoggedIn ? <UserGreeting/> : <GuestGreeting/>
+            // if(isLoggedIn){
+            //     return <UserGreeting />;
+            // }
+            // return <GuestGreeting />;
+        }
+
+        ReactDOM.render(<Greeting isLoggedIn={false}/>, document.getElementById('root'));
+
+    </script>
+
+    
+</body>
+</html>

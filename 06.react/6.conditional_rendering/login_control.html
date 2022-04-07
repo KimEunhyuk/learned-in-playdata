@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        // 함수형 컴포넌트로 LoginControl이라는 컴포넌트 생성
+
+        // 현재 LoginControl이 최상위 컴포넌트.
+        const { useState } = React;
+
+        const LoginControl = () => {
+            const [isLoggedIn, setIsLoggedIn] = useState(false);
+            // is it Logged in? true or false
+
+            const loginButtonHandler = () => {
+                setIsLoggedIn(!isLoggedIn)
+            };
+
+            return (
+                <>
+                <Greeting isLoggedIn={isLoggedIn}/>
+                {isLoggedIn ? <LogoutButton onClick={loginButtonHandler}/> : <LoginButton onClick={loginButtonHandler} />}
+                </>
+            )
+        };
+        // 인사 메시지를 처리하는 별도의 컴포넌트 생성
+        const Greeting = (props) => {
+            return props.isLoggedIn ? <UserGreeting /> : <GuestGreeting />;
+        };
+
+        const UserGreeting = () => {
+            return <h1>Welcome back!</h1>;
+        };
+        const GuestGreeting = () => {
+            return <h1>Please sign in!</h1>;
+        };
+
+        // props로 함수를 전달받아서, 그 함수를 호출해서 Login or Logout text 및
+        // Greeting 텍스트도 변경하려면 어떻게 해야할까?
+        const LoginButton = (props) => {
+            return <button onClick={props.onClick}>Login</button>
+        };
+        const LogoutButton = (props) => {
+            return <button onClick={props.onClick}>Logout</button>
+        };
+
+        ReactDOM.render(<LoginControl/>, document.getElementById('root'));
+    </script>
+    
+</body>
+</html>
