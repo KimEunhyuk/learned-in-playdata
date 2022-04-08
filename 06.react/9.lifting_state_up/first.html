@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <script type="text/babel">
+        // state를 활용하기 위해 useState() hook 활용.
+        const { useState } = React; // import { useState } from 'react';
+
+        // 온도를 입력할 수 있는 input 엘리먼트 보유, 그 값을 temperature라고 하는 state에 저장하는 컴포넌트.
+        const Calculater = (props) => {
+            // state의 초기값(initial value)으로 teperature를 프로퍼티로 가지고 있는 객체(object) 사용.
+            // const temper = {
+            //      temperature: ''
+            //};
+            // const [state, setState] = useState(temper);
+            const [state, setState] = useState( { temperature: '' } );
+            // state = {temperature : ''}
+
+            const temperature = state.temperature
+
+            const changeHandler = (event) => {
+                //console.log(event.target.value);
+                setState({temperature: event.target.value});
+                console.log(state);
+            };
+
+            const testHandler = () => {};
+
+            return(
+                <fieldset>
+                    <legend>섭씨 온도를 입력하세요 : </legend>
+                    <input value={temperature} onChange={changeHandler}/>
+                    <BoilingVerdict celsius={temperature}/>
+                </fieldset>
+            )
+        }
+
+        // 입력한 값이 끓는점 온도인지의 여부에 따라 결과값 분기하는 컴포넌트
+        const BoilingVerdict = (props) => {
+            // celsius : 섭씨온도
+            if (props.celsius >= 100){
+                return <p>물이 끓는점입니다.</p>;
+            }
+            return <p>끓는점이 아직 아닙니다.</p>;
+        }
+
+        ReactDOM.render(<Calculater />, document.getElementById('root'));
+    </script>
+</body>
+</html> 
