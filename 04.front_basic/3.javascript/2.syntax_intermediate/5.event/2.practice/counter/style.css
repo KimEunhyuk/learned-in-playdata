@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+
+body{
+    margin: 0;
+    font-family: 'Titillium Web', 'Open Sans';
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+}
+
+.container {
+    text-align: center;
+}
+
+.container > h2{
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.btni{
+    font-family: 'Titillium Web', 'Open Sans';
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    text-transform: capitalize; /* 앞글자 전체 대문자 */
+    background: transparent;
+    border : 2ps dashed black;
+    padding: 0.5rem 0.75rem; /* 2개 : 상하, 좌우 */
+}
+
+
+.btnr{
+    font-family: 'Titillium Web', 'Open Sans';
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    text-transform: capitalize; /* 앞글자 전체 대문자 */
+    background: transparent;
+    border : 2ps dashed black;
+    padding: 0.5rem 0.75rem; /* 2개 : 상하, 좌우 */
+}
+
+
+.btnd{
+    font-family: 'Titillium Web', 'Open Sans';
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    text-transform: capitalize; /* 앞글자 전체 대문자 */
+    background: transparent;
+    border : 2ps dashed black;
+    padding: 0.5rem 0.75rem; /* 2개 : 상하, 좌우 */
+}

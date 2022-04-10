@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="counter.js"></script>
+    <link rel="stylesheet" href="counter.css">
+    <title>COUNTER</title>
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <h2>
+                COUNTER<br>
+                <span class="number" id="result">0</span>
+            </h2>
+            <!--
+            <button class="btn" id="decrease">DECREASE</button>
+            <button class="btn" id="RESET">RESET</button>
+            <button class="btn" id="INCREASE">INCREASE</button>
+            -->
+
+            <input type='button' class="decrease" onclick='count("minus")' value='DECREASE'>
+            <input type='button' class="reset" onclick='count("reset")' value='RESET'>
+            <input type='button' class="increase" onclick='count("plus")' value='INCREASE'>
+            
+        </div>
+
+    </main>
+</body>
+</html>

@@ -1,0 +1,16 @@
+.error {
+    box-shadow: none;
+    border-radius: 0;
+    overflow: visible;
+    cursor: pointer;
+  
+    background-color: transparent;
+    border: 2px dashed skyblue;
+    color: skyblue;
+  
+    letter-spacing: 0.1rem;
+    padding: 0.75rem;
+    margin-top: 1rem;
+    font-size: 1rem;
+  }
+  
