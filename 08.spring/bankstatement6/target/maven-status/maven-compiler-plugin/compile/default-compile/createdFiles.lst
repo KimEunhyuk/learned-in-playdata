@@ -1,0 +1,8 @@
+dev\bank\bankstatement\data\BankStatementParser.class
+dev\bank\bankstatement\model\BankTransaction.class
+dev\bank\bankstatement\BankStatementAnalyzer.class
+dev\bank\bankstatement\BackStatementFactory.class
+dev\bank\bankstatement\service\BankStatementProcessor.class
+dev\bank\bankstatement\data\BankStatementCSVParser.class
+dev\bank\bankstatement\data\BankStatementTSVParser.class
+dev\bank\bankstatement\MainApplication.class
